@@ -1,35 +1,16 @@
-import headerLogo from './images/header-logo.svg'
+import Header from './components/Header'
+import Main from './components/Main'
+import Footer from './components/Footer'
 function App() {
   return (
       <>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Mесто</title>
-        <header className="header">
-          <img className="header__logo" src={headerLogo} alt="Логотип" />
-        </header>
-        <main className="content">
-          <section className="profile">
-            <div className="profile__box">
-              <div className="profile__avatar-container">
-                <img className="profile__avatar" src="images/avatarka.png" alt="аватарка" />
-                <img className="profile__avatar-edit" src="images/pen.svg" alt="кнопка изменения аватара" />
-              </div>
-              <div className="profile__info">
-                <h1 className="profile__info-name">Жак-Ив Кусто</h1>
-                <button type="button" className="profile__info-edit-button profile__click" />
-                <h2 className="profile__info-status">Исследователь океана</h2>
-              </div>
-            </div>
-            <button type="button" className="profile__add-button profile__click" />
-          </section>
-          <section className="elements">
-            <template id="card-template" />
-          </section>
-        </main>
-        <footer className="footer">
-          <p className="footer__text">© 2020 Mesto Russia</p>
-        </footer>
+        <body className='body'>
+        <Header />
+        <Main />
+        <Footer />
         <div className="popup popup_type_user">
           <form name="profile-info" action="#" className="popup__form popup__edit-form" noValidate>
             <button type="button" className="popup__close-btn" />
@@ -75,8 +56,8 @@ function App() {
             <button className="popup__save-btn popup__save-btn_confirm" type="button">Да</button>
           </div>
         </div>
+        </body>
       </>
-
   );
 }
 
