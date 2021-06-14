@@ -6,7 +6,7 @@ import PopupEditAvatar from './components/PopupEditAvatar'
 import PopupEditUser from './components/PopupEditUser'
 import PopupAddCard from './components/PopupAddCard'
 import PopupWithConfirm from './components/PopupWithConfirm'
-import PopupWithPhoto from './components/PopupWithPhoto'
+import ImagePopup from './components/ImagePopup'
 function App() {
     const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = React.useState(false);
     const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] = React.useState(false);
@@ -44,7 +44,7 @@ function App() {
         <PopupEditUser isOpen={isEditProfilePopupOpen} onClose={closeAllPopups}/>
         <PopupAddCard  isOpen={isAddCardPopupOpen} onClose={closeAllPopups}/>
         <PopupWithConfirm />
-        <PopupWithPhoto card={selectedCard !== null && selectedCard} onClose={closeAllPopups} />
+        <ImagePopup card={selectedCard !== null && selectedCard} onClose={closeAllPopups} />
       </>
   );
 }

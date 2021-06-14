@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3d1d633-1d0a-4a6c-985b-68ab80dbc721" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PopupAddCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PopupAddCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PopupWithPhoto.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ImagePopup.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +67,7 @@
       <updated>1623494244111</updated>
       <workItem from="1623494245865" duration="561000" />
       <workItem from="1623573400965" duration="25387000" />
-      <workItem from="1623664491226" duration="559000" />
+      <workItem from="1623664491226" duration="860000" />
     </task>
     <task id="LOCAL-00001" summary="[[">
       <created>1623518499261</created>
@@ -111,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623601429429</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="version 10.0.1">
+      <created>1623665091796</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1623665091796</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,6 +142,7 @@
     <MESSAGE value="style noWork" />
     <MESSAGE value="number  5 done" />
     <MESSAGE value="fix addPopup" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix addPopup" />
+    <MESSAGE value="version 10.0.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="version 10.0.1" />
   </component>
 </project>
