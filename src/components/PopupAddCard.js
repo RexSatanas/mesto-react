@@ -3,7 +3,7 @@ import PopupWithForm from './PopupWithForm'
 
 function PopupAddCard(props){
     return(
-        <PopupWithForm name='add' title='Новое место' buttonText='Добавить'>
+        <PopupWithForm name='add' title='Новое место' buttonText='Добавить' isOpen={props.isOpen} onClose={props.onClose}>
             <input id="place" name="name" className="popup__input popup__input_name-place" type="text" required minLength="2" maxLength="30" placeholder="Название"/>
             <span className="popup__input-error" id="place-error"></span>
             <input id="link" name="link" className="popup__input popup__input_link-place" type="url" required placeholder="Ссылка на картинку"/>
