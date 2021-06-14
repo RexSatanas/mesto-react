@@ -34,7 +34,6 @@ function App() {
     }
   return (
       <>
-        <title>Mесто</title>
         <Header />
         <Main onEditAvatar={handleEditAvatarClick} onEditProfile={handleEditProfileClick} onAddPlace={handleAddPlaceClick} onCardClick={handleCardClick} />
         <Footer />
