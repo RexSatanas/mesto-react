@@ -1,12 +1,12 @@
 import React from 'react'
-import Header from './components/Header'
-import Main from './components/Main'
-import Footer from './components/Footer'
-import PopupEditAvatar from './components/PopupEditAvatar'
-import PopupEditUser from './components/PopupEditUser'
-import PopupAddCard from './components/PopupAddCard'
-import PopupWithConfirm from './components/PopupWithConfirm'
-import ImagePopup from './components/ImagePopup'
+import Header from './Header'
+import Main from './Main'
+import Footer from './Footer'
+import PopupEditAvatar from './PopupEditAvatar'
+import PopupEditUser from './PopupEditUser'
+import PopupAddCard from './PopupAddCard'
+import PopupWithConfirm from './PopupWithConfirm'
+import ImagePopup from './ImagePopup'
 function App() {
     const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = React.useState(false);
     const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] = React.useState(false);
@@ -34,8 +34,6 @@ function App() {
     }
   return (
       <>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Mесто</title>
         <Header />
         <Main onEditAvatar={handleEditAvatarClick} onEditProfile={handleEditProfileClick} onAddPlace={handleAddPlaceClick} onCardClick={handleCardClick} />
