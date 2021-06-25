@@ -7,11 +7,25 @@ import PopupEditUser from './PopupEditUser'
 import PopupAddCard from './PopupAddCard'
 import PopupWithConfirm from './PopupWithConfirm'
 import ImagePopup from './ImagePopup'
+import api from '../utils/api'
+import {CurrentUserContext} from '../contexts/CurrentUserContext'
 function App() {
     const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = React.useState(false);
     const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] = React.useState(false);
     const [isAddCardPopupOpen, setIsAddCardPopupOpen] = React.useState(false);
     const [selectedCard, setSelectedCard] = React.useState(null);
+    const [currentUser, setCurrentUser] = React.useState('')
+
+    React.useEffect(() => {
+
+        Promise.all([
+            api.getUser()
+        ])
+            .then(([userData]) => {
+                setCurrentUser(userData)
+            })
+            .catch((err) => console.log(err))
+    }, []);
 
     function handleEditAvatarClick() {
         setIsEditAvatarPopupOpen(true)
@@ -33,16 +47,16 @@ function App() {
         setSelectedCard(null);
     }
   return (
-      <>
-        <Header />
-        <Main onEditAvatar={handleEditAvatarClick} onEditProfile={handleEditProfileClick} onAddPlace={handleAddPlaceClick} onCardClick={handleCardClick} />
-        <Footer />
-        <PopupEditAvatar isOpen={isEditAvatarPopupOpen} onClose={closeAllPopups}/>
-        <PopupEditUser isOpen={isEditProfilePopupOpen} onClose={closeAllPopups}/>
-        <PopupAddCard  isOpen={isAddCardPopupOpen} onClose={closeAllPopups}/>
-        <PopupWithConfirm />
-        <ImagePopup card={selectedCard !== null && selectedCard} onClose={closeAllPopups} />
-      </>
+      <CurrentUserContext.Provider value={currentUser}>
+          <Header />
+          <Main onEditAvatar={handleEditAvatarClick} onEditProfile={handleEditProfileClick} onAddPlace={handleAddPlaceClick} onCardClick={handleCardClick} />
+          <Footer />
+          <PopupEditAvatar isOpen={isEditAvatarPopupOpen} onClose={closeAllPopups}/>
+          <PopupEditUser isOpen={isEditProfilePopupOpen} onClose={closeAllPopups}/>
+          <PopupAddCard  isOpen={isAddCardPopupOpen} onClose={closeAllPopups}/>
+          <PopupWithConfirm />
+          <ImagePopup card={selectedCard !== null && selectedCard} onClose={closeAllPopups} />
+      </CurrentUserContext.Provider>
   );
 }
 

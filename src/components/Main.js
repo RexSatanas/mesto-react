@@ -2,24 +2,18 @@ import Pen from '../images/pen.svg'
 import React from 'react'
 import api from '../utils/api'
 import Card from '../components/Card'
+import {CurrentUserContext} from '../contexts/CurrentUserContext'
 function Main(props) {
-    const [userName, setuserName] = React.useState('');
-    const [userDescription, setUserDescription] = React.useState('');
-    const [userAvatar, setUserAvatar] = React.useState('');
     const [cards, setCards] = React.useState([]);
+    const currentUser = React.useContext(CurrentUserContext)
 
     React.useEffect(() => {
 
-
         Promise.all([
-            api.getUser(),
             api.getCards()
         ])
-            .then(([userData, cards]) => {
-                setuserName(userData.name);
-                setUserDescription(userData.about);
-                setUserAvatar(userData.avatar);
-                setCards(cards)
+            .then(([cards]) => {
+                setCards(cards);
             })
             .catch((err) => console.log(err))
     }, []);
@@ -30,13 +24,13 @@ function Main(props) {
             <section className="profile">
                 <div className="profile__box">
                     <div className="profile__avatar-container">
-                        <img className="profile__avatar" src={userAvatar} alt="аватарка" />
+                        <img className="profile__avatar" src={currentUser.avatar} alt="аватарка" />
                         <img className="profile__avatar-edit" src={Pen} alt="кнопка изменения аватара" onClick={props.onEditAvatar}/>
                     </div>
                     <div className="profile__info">
-                        <h1 className="profile__info-name">{userName}</h1>
+                        <h1 className="profile__info-name">{currentUser.name}</h1>
                         <button type="button" className="profile__info-edit-button profile__click" onClick={props.onEditProfile}/>
-                        <h2 className="profile__info-status">{userDescription}</h2>
+                        <h2 className="profile__info-status">{currentUser.about}</h2>
                     </div>
                 </div>
                 <button type="button" className="profile__add-button profile__click" onClick={props.onAddPlace}/>
