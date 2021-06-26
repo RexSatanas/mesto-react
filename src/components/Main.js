@@ -1,23 +1,10 @@
 import Pen from '../images/pen.svg'
 import React from 'react'
-import api from '../utils/api'
+/*import api from '../utils/api'*/
 import Card from '../components/Card'
 import {CurrentUserContext} from '../contexts/CurrentUserContext'
 function Main(props) {
-    const [cards, setCards] = React.useState([]);
     const currentUser = React.useContext(CurrentUserContext)
-
-    React.useEffect(() => {
-
-        Promise.all([
-            api.getCards()
-        ])
-            .then(([cards]) => {
-                setCards(cards);
-            })
-            .catch((err) => console.log(err))
-    }, []);
-
 
     return(
         <main className="content">
@@ -36,9 +23,14 @@ function Main(props) {
                 <button type="button" className="profile__add-button profile__click" onClick={props.onAddPlace}/>
             </section>
             <section className="elements">
-                {cards.map((card) => (
-                    <Card card={card} key={card._id} onCardClick={props.onCardClick} />
-                ))}
+                {props.cards.map(card => {
+                    return (<Card
+                        card={card}
+                        onClick={props.onCardClick}
+                        key={card._id} link={card.link}
+                        name={card.name}
+                    />)
+                })}
             </section>
         </main>
     )

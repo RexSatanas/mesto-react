@@ -14,15 +14,18 @@ function App() {
     const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] = React.useState(false);
     const [isAddCardPopupOpen, setIsAddCardPopupOpen] = React.useState(false);
     const [selectedCard, setSelectedCard] = React.useState(null);
-    const [currentUser, setCurrentUser] = React.useState('')
+    const [currentUser, setCurrentUser] = React.useState({})
+    const [cards, setCards] = React.useState([]);
 
     React.useEffect(() => {
 
         Promise.all([
-            api.getUser()
+            api.getUser(),
+            api.getCards()
         ])
-            .then(([userData]) => {
+            .then(([userData, cards]) => {
                 setCurrentUser(userData)
+                setCards(cards)
             })
             .catch((err) => console.log(err))
     }, []);
@@ -49,7 +52,13 @@ function App() {
   return (
       <CurrentUserContext.Provider value={currentUser}>
           <Header />
-          <Main onEditAvatar={handleEditAvatarClick} onEditProfile={handleEditProfileClick} onAddPlace={handleAddPlaceClick} onCardClick={handleCardClick} />
+          <Main
+              onEditAvatar={handleEditAvatarClick}
+              onEditProfile={handleEditProfileClick}
+              onAddPlace={handleAddPlaceClick}
+              onCardClick={handleCardClick}
+              cards={cards}
+          />
           <Footer />
           <PopupEditAvatar isOpen={isEditAvatarPopupOpen} onClose={closeAllPopups}/>
           <PopupEditUser isOpen={isEditProfilePopupOpen} onClose={closeAllPopups}/>
