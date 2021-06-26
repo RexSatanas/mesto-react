@@ -1,5 +1,5 @@
-class Api{
-    constructor({ url, headers }) {
+class Api {
+    constructor({url, headers}) {
         this._url = url;
         this._headers = headers;
     }
@@ -26,7 +26,7 @@ class Api{
             .then(this._getResponseData)
     }
 
-    updateUserInfo({ name, status }) {
+    updateUserInfo({name, status}) {
         return fetch(`${this._url}/users/me`, {
             method: 'PATCH',
             headers: this._headers,
@@ -38,7 +38,7 @@ class Api{
             .then(this._getResponseData)
     }
 
-    saveNewCard({ name, url }) {
+    saveNewCard({name, url}) {
         return fetch(`${this._url}/cards`, {
             method: 'POST',
             headers: this._headers,
@@ -86,9 +86,17 @@ class Api{
         })
             .then(this._getResponseData)
     }
+
+    changeLikeCardStatus(id, isLiked) {
+        if (isLiked) {
+            return this.likeCardCancel(id)
+        } else {
+            return this.likeCard(id)
+        }
+    }
 }
 
-const api = new Api({
+    const api = new Api({
     url: 'https://mesto.nomoreparties.co/v1/cohort-24',
     headers: {
         authorization: 'be87e10d-5f50-49e4-a06f-5cefb6b5b607',

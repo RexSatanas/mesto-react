@@ -23,9 +23,9 @@ function App() {
             api.getUser(),
             api.getCards()
         ])
-            .then(([userData, cards]) => {
+            .then(([userData, cardsData]) => {
                 setCurrentUser(userData)
-                setCards(cards)
+                setCards(cardsData)
             })
             .catch((err) => console.log(err))
     }, []);
@@ -42,6 +42,25 @@ function App() {
     function handleCardClick(card) {
         setSelectedCard(card);
     }
+    function handleCardLike(card) {
+        const isLiked = card.likes.some(i => i._id === currentUser._id);
+        api.changeLikeCardStatus(card._id, !isLiked).then((newCard) => {
+            setCards((cards) => cards.map((c) => c._id === card._id ? newCard : c));
+        })
+        .catch(err => {
+            console.log(`Ошибка: ${err}.`)
+        })
+    }
+    function handleCardDelete(card){
+        api.deleteCard(card._id)
+            .then(() => {
+                const newCards = cards.filter(item => item !== card)
+                setCards(newCards)
+            })
+            .catch(err => {
+                console.log(`Ошибка: ${err}.`)
+            })
+    }
 
     function closeAllPopups() {
         setIsEditProfilePopupOpen(false);
@@ -57,6 +76,8 @@ function App() {
               onEditProfile={handleEditProfileClick}
               onAddPlace={handleAddPlaceClick}
               onCardClick={handleCardClick}
+              onCardLike={handleCardLike}
+              onCardDelete={handleCardDelete}
               cards={cards}
           />
           <Footer />
