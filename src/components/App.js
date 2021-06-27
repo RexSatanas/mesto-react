@@ -42,6 +42,17 @@ function App() {
     function handleCardClick(card) {
         setSelectedCard(card);
     }
+    function handleUpdateUser(data){
+        api.updateUserInfo(data)
+            .then(userData => {
+                setCurrentUser(userData)
+                closeAllPopups()
+            })
+            .catch(err => {
+                console.log(`Ошибка: ${err}.`)
+            })
+    }
+
     function handleCardLike(card) {
         const isLiked = card.likes.some(i => i._id === currentUser._id);
         api.changeLikeCardStatus(card._id, !isLiked).then((newCard) => {
@@ -82,7 +93,7 @@ function App() {
           />
           <Footer />
           <PopupEditAvatar isOpen={isEditAvatarPopupOpen} onClose={closeAllPopups}/>
-          <PopupEditUser isOpen={isEditProfilePopupOpen} onClose={closeAllPopups}/>
+          <PopupEditUser isOpen={isEditProfilePopupOpen} onClose={closeAllPopups} onUpdateUser={handleUpdateUser}/>
           <PopupAddCard  isOpen={isAddCardPopupOpen} onClose={closeAllPopups}/>
           <PopupWithConfirm />
           <ImagePopup card={selectedCard !== null && selectedCard} onClose={closeAllPopups} />

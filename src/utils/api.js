@@ -26,36 +26,36 @@ class Api {
             .then(this._getResponseData)
     }
 
-    updateUserInfo({name, status}) {
+    updateUserInfo(data) {
         return fetch(`${this._url}/users/me`, {
             method: 'PATCH',
             headers: this._headers,
             body: JSON.stringify({
-                name: name,
-                about: status
+                name: data.name,
+                about: data.status
             })
         })
             .then(this._getResponseData)
     }
 
-    saveNewCard({name, url}) {
+    saveNewCard(data) {
         return fetch(`${this._url}/cards`, {
             method: 'POST',
             headers: this._headers,
             body: JSON.stringify({
-                name: name,
-                link: url
+                name: data.name,
+                link: data.link
             })
         })
             .then(this._getResponseData)
     }
 
-    newAvatar(url) {
+    newAvatar(data) {
         return fetch(`${this._url}/users/me/avatar`, {
             method: 'PATCH',
             headers: this._headers,
             body: JSON.stringify({
-                avatar: url,
+                avatar: data.avatar
             })
         })
             .then(this._getResponseData)
