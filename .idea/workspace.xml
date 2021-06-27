@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a3d1d633-1d0a-4a6c-985b-68ab80dbc721" name="Default Changelist" comment="">
+    <list default="true" id="a3d1d633-1d0a-4a6c-985b-68ab80dbc721" name="Default Changelist" comment="version 11.0.3&#10;Done:&#10;-deleteCard&#10;HalfDone:&#10;-like(no black heart)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/api.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +80,7 @@
       <workItem from="1623671426500" duration="42000" />
       <workItem from="1623672983365" duration="874000" />
       <workItem from="1624610561000" duration="6356000" />
-      <workItem from="1624713364167" duration="6926000" />
+      <workItem from="1624713364167" duration="7738000" />
     </task>
     <task id="LOCAL-00001" summary="[[">
       <created>1623518499261</created>
@@ -163,7 +159,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623674139596</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="version 11.0.3&#10;Done:&#10;-deleteCard&#10;HalfDone:&#10;-like(no black heart)">
+      <created>1624720683128</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1624720683128</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,6 +194,7 @@
     <MESSAGE value="version 10.0.2" />
     <MESSAGE value="version 10.0.3" />
     <MESSAGE value="version 10.0.4" />
-    <option name="LAST_COMMIT_MESSAGE" value="version 10.0.4" />
+    <MESSAGE value="version 11.0.3&#10;Done:&#10;-deleteCard&#10;HalfDone:&#10;-like(no black heart)" />
+    <option name="LAST_COMMIT_MESSAGE" value="version 11.0.3&#10;Done:&#10;-deleteCard&#10;HalfDone:&#10;-like(no black heart)" />
   </component>
 </project>
