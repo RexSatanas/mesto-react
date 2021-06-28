@@ -4,6 +4,9 @@
     <list default="true" id="a3d1d633-1d0a-4a6c-985b-68ab80dbc721" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PopupAddCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PopupAddCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PopupEditAvatar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PopupEditAvatar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PopupEditUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PopupEditUser.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/PopupWithConfirm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PopupWithConfirm.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -87,7 +90,7 @@
       <workItem from="1624610561000" duration="6356000" />
       <workItem from="1624713364167" duration="7738000" />
       <workItem from="1624790446644" duration="9806000" />
-      <workItem from="1624873331677" duration="8480000" />
+      <workItem from="1624873331677" duration="10647000" />
     </task>
     <task id="LOCAL-00001" summary="[[">
       <created>1623518499261</created>
@@ -201,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624875829650</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="version 11.1.1&#10;Done:&#10;Delete Confirm cards&#10;Ready for 1st review">
+      <created>1624881850180</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1624881850180</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,6 +244,7 @@
     <MESSAGE value="version 11.0.5&#10;Done:&#10;-Profile" />
     <MESSAGE value="version 11.0.6&#10;Done:&#10;-Avatar" />
     <MESSAGE value="version 11.1&#10;Done:&#10;cards&#10;Ready for 1st review" />
-    <option name="LAST_COMMIT_MESSAGE" value="version 11.1&#10;Done:&#10;cards&#10;Ready for 1st review" />
+    <MESSAGE value="version 11.1.1&#10;Done:&#10;Delete Confirm cards&#10;Ready for 1st review" />
+    <option name="LAST_COMMIT_MESSAGE" value="version 11.1.1&#10;Done:&#10;Delete Confirm cards&#10;Ready for 1st review" />
   </component>
 </project>
