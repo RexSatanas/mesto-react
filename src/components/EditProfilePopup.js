@@ -37,5 +37,5 @@ function EditProfilePopup(props){
         </PopupWithForm>
     )
 }
-export default PopupEditUser
+export default EditProfilePopup
 

@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a3d1d633-1d0a-4a6c-985b-68ab80dbc721" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AddPlacePopup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AddPlacePopup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EditAvatarPopup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EditAvatarPopup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EditProfilePopup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EditProfilePopup.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,10 +35,10 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/components/PopupWithConfirm.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/components/PopupWithForm.js" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/components/PopupAddCard.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/components/AddPlacePopup.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/components/App.js" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/components/PopupEditAvatar.js" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/components/PopupEditUser.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/components/EditAvatarPopup.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/components/EditProfilePopup.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/components/Card.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/utils/api.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/components/Main.js" root0="FORCE_HIGHLIGHTING" />
@@ -85,7 +88,8 @@
       <workItem from="1624610561000" duration="6356000" />
       <workItem from="1624713364167" duration="7738000" />
       <workItem from="1624790446644" duration="9806000" />
-      <workItem from="1624873331677" duration="11536000" />
+      <workItem from="1624873331677" duration="12360000" />
+      <workItem from="1624895191464" duration="316000" />
     </task>
     <task id="LOCAL-00001" summary="[[">
       <created>1623518499261</created>
@@ -213,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624884601186</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="version 11.1.2&#10;&#10;Ready for 1st review">
+      <created>1624886813629</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1624886813629</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,6 +259,7 @@
     <MESSAGE value="version 11.1&#10;Done:&#10;cards&#10;Ready for 1st review" />
     <MESSAGE value="version 11.1.1&#10;Done:&#10;Delete Confirm cards&#10;Ready for 1st review" />
     <MESSAGE value="version 11.1.1&#10;Done:&#10;isSaving&#10;Ready for 1st review" />
-    <option name="LAST_COMMIT_MESSAGE" value="version 11.1.1&#10;Done:&#10;isSaving&#10;Ready for 1st review" />
+    <MESSAGE value="version 11.1.2&#10;&#10;Ready for 1st review" />
+    <option name="LAST_COMMIT_MESSAGE" value="version 11.1.2&#10;&#10;Ready for 1st review" />
   </component>
 </project>

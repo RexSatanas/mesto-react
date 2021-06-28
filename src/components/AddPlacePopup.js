@@ -33,4 +33,4 @@ function AddPlacePopup(props){
         </PopupWithForm>
     )
 }
-export default PopupAddCard
+export default AddPlacePopup

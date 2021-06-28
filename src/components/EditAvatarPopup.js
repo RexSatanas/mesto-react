@@ -20,4 +20,4 @@ function EditAvatarPopup(props){
     )
 }
 
-export default PopupEditAvatar
+export default EditAvatarPopup
