@@ -1,9 +1,13 @@
 import React from 'react'
 import PopupWithForm from './PopupWithForm'
 
-function PopupWithConfirm() {
+function PopupWithConfirm(props) {
+    function handleSubmit (e) {
+        e.preventDefault();
+        props.onHandleCardDeleteConfirm(props.cardId);
+    };
     return (
-        <PopupWithForm name="submit" title="Вы уверены?" buttonText="Да"></PopupWithForm>
+        <PopupWithForm name="submit" title="Вы уверены?" buttonText="Да" isOpen={props.isOpen} onClose={props.onClose} onSubmit={handleSubmit}/>
     )
 }
 

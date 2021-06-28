@@ -13,7 +13,9 @@ function App() {
     const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = React.useState(false);
     const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] = React.useState(false);
     const [isAddCardPopupOpen, setIsAddCardPopupOpen] = React.useState(false);
+    const [isConfirmPopupOpen, setIsConfirmPopupOpen] = React.useState(false);
     const [selectedCard, setSelectedCard] = React.useState(null);
+    const [cardIdToDelete, setCardIdToDelete] = React.useState('');
     const [currentUser, setCurrentUser] = React.useState({})
     const [cards, setCards] = React.useState([]);
 
@@ -72,21 +74,41 @@ function App() {
         })
             .catch((err) => console.log(err))
     }
-    function handleCardDelete(card){
+
+/*    function handleCardDelete(card){
         api.deleteCard(card._id)
             .then(() => {
                 const newCards = cards.filter(item => item !== card)
                 setCards(newCards)
             })
             .catch((err) => console.log(err))
-    }
+    }*/
+
 
     function closeAllPopups() {
         setIsEditProfilePopupOpen(false);
         setIsEditAvatarPopupOpen(false);
         setIsAddCardPopupOpen(false);
+        setIsConfirmPopupOpen(false)
         setSelectedCard(null);
     }
+
+    function handleCardDelete(card){
+        setIsConfirmPopupOpen(true)
+        setCardIdToDelete(card);
+    }
+
+    function handleCardDeleteConfirm(card) {
+        api.deleteCard(card._id)
+            .then(() => {
+                const newCards = cards.filter(item => item !== card)
+                setCards(newCards)
+                closeAllPopups()
+            })
+            .catch((err) => console.log(err))
+    };
+
+
   return (
       <CurrentUserContext.Provider value={currentUser}>
           <Header />
@@ -100,11 +122,31 @@ function App() {
               cards={cards}
           />
           <Footer />
-          <PopupEditAvatar isOpen={isEditAvatarPopupOpen} onClose={closeAllPopups} onUpdateAvatar={handleUpdateAvatar}/>
-          <PopupEditUser isOpen={isEditProfilePopupOpen} onClose={closeAllPopups} onUpdateUser={handleUpdateUser}/>
-          <PopupAddCard  isOpen={isAddCardPopupOpen} onClose={closeAllPopups} onAddCard={handleAddPlaceSubmit}/>
-          <PopupWithConfirm />
-          <ImagePopup card={selectedCard !== null && selectedCard} onClose={closeAllPopups} />
+          <PopupEditAvatar
+              isOpen={isEditAvatarPopupOpen}
+              onClose={closeAllPopups}
+              onUpdateAvatar={handleUpdateAvatar}
+          />
+          <PopupEditUser
+              isOpen={isEditProfilePopupOpen}
+              onClose={closeAllPopups}
+              onUpdateUser={handleUpdateUser}
+          />
+          <PopupAddCard
+              isOpen={isAddCardPopupOpen}
+              onClose={closeAllPopups}
+              onAddCard={handleAddPlaceSubmit}
+          />
+          <PopupWithConfirm
+              isOpen={isConfirmPopupOpen}
+              onClose={closeAllPopups}
+              onHandleCardDeleteConfirm={handleCardDeleteConfirm}
+              cardId={cardIdToDelete}
+          />
+          <ImagePopup
+              card={selectedCard !== null && selectedCard}
+              onClose={closeAllPopups}
+          />
       </CurrentUserContext.Provider>
   );
 }
