@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a3d1d633-1d0a-4a6c-985b-68ab80dbc721" name="Default Changelist" comment="">
+    <list default="true" id="a3d1d633-1d0a-4a6c-985b-68ab80dbc721" name="Default Changelist" comment="version 11.0.6&#10;Done:&#10;-Avatar">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PopupEditAvatar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PopupEditAvatar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PopupAddCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PopupAddCard.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +33,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/components/PopupWithForm.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/components/PopupAddCard.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/components/App.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/components/PopupEditAvatar.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/components/PopupEditUser.js" root0="FORCE_HIGHLIGHTING" />
@@ -84,7 +85,8 @@
       <workItem from="1623672983365" duration="874000" />
       <workItem from="1624610561000" duration="6356000" />
       <workItem from="1624713364167" duration="7738000" />
-      <workItem from="1624790446644" duration="8589000" />
+      <workItem from="1624790446644" duration="9806000" />
+      <workItem from="1624873331677" duration="2402000" />
     </task>
     <task id="LOCAL-00001" summary="[[">
       <created>1623518499261</created>
@@ -184,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624797741547</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="version 11.0.6&#10;Done:&#10;-Avatar">
+      <created>1624799823610</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1624799823610</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,18 +224,7 @@
     <MESSAGE value="version 11.0.3&#10;Done:&#10;-deleteCard&#10;HalfDone:&#10;-like(no black heart)" />
     <MESSAGE value="version 11.0.4&#10;Done:&#10;-like" />
     <MESSAGE value="version 11.0.5&#10;Done:&#10;-Profile" />
-    <option name="LAST_COMMIT_MESSAGE" value="version 11.0.5&#10;Done:&#10;-Profile" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/utils/api.js</url>
-          <line>21</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="version 11.0.6&#10;Done:&#10;-Avatar" />
+    <option name="LAST_COMMIT_MESSAGE" value="version 11.0.6&#10;Done:&#10;-Avatar" />
   </component>
 </project>

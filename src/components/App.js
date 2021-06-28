@@ -18,7 +18,6 @@ function App() {
     const [cards, setCards] = React.useState([]);
 
     React.useEffect(() => {
-
         Promise.all([
             api.getUser(),
             api.getCards()
@@ -48,9 +47,15 @@ function App() {
                 setCurrentUser(userData)
                 closeAllPopups()
             })
-            .catch(err => {
-                console.log(`Ошибка: ${err}.`)
+            .catch((err) => console.log(err))
+    }
+    function handleAddPlaceSubmit(data){
+        api.saveNewCard(data)
+            .then(newCard => {
+                setCards([newCard, ...cards])
+                closeAllPopups()
             })
+            .catch((err) => console.log(err))
     }
     function handleUpdateAvatar(data){
         api.newAvatar(data)
@@ -58,19 +63,14 @@ function App() {
                 setCurrentUser(avatar)
                 closeAllPopups()
             })
-            .catch(err => {
-                console.log(`Ошибка: ${err}.`)
-            })
+            .catch((err) => console.log(err))
     }
-
     function handleCardLike(card) {
         const isLiked = card.likes.some(i => i._id === currentUser._id);
         api.changeLikeCardStatus(card._id, !isLiked).then((newCard) => {
             setCards((cards) => cards.map((c) => c._id === card._id ? newCard : c));
         })
-        .catch(err => {
-            console.log(`Ошибка: ${err}.`)
-        })
+            .catch((err) => console.log(err))
     }
     function handleCardDelete(card){
         api.deleteCard(card._id)
@@ -78,9 +78,7 @@ function App() {
                 const newCards = cards.filter(item => item !== card)
                 setCards(newCards)
             })
-            .catch(err => {
-                console.log(`Ошибка: ${err}.`)
-            })
+            .catch((err) => console.log(err))
     }
 
     function closeAllPopups() {
@@ -104,7 +102,7 @@ function App() {
           <Footer />
           <PopupEditAvatar isOpen={isEditAvatarPopupOpen} onClose={closeAllPopups} onUpdateAvatar={handleUpdateAvatar}/>
           <PopupEditUser isOpen={isEditProfilePopupOpen} onClose={closeAllPopups} onUpdateUser={handleUpdateUser}/>
-          <PopupAddCard  isOpen={isAddCardPopupOpen} onClose={closeAllPopups}/>
+          <PopupAddCard  isOpen={isAddCardPopupOpen} onClose={closeAllPopups} onAddCard={handleAddPlaceSubmit}/>
           <PopupWithConfirm />
           <ImagePopup card={selectedCard !== null && selectedCard} onClose={closeAllPopups} />
       </CurrentUserContext.Provider>
