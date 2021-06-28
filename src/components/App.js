@@ -2,9 +2,9 @@ import React from 'react'
 import Header from './Header'
 import Main from './Main'
 import Footer from './Footer'
-import PopupEditAvatar from './PopupEditAvatar'
-import PopupEditUser from './PopupEditUser'
-import PopupAddCard from './PopupAddCard'
+import EditAvatarPopup from './EditAvatarPopup'
+import EditProfilePopup from './EditProfilePopup'
+import AddPlacePopup from './AddPlacePopup'
 import PopupWithConfirm from './PopupWithConfirm'
 import ImagePopup from './ImagePopup'
 import api from '../utils/api'
@@ -118,18 +118,18 @@ function App() {
               cards={cards}
           />
           <Footer />
-          <PopupEditAvatar
+          <EditAvatarPopup
               isOpen={isEditAvatarPopupOpen}
               onClose={closeAllPopups}
               onUpdateAvatar={handleUpdateAvatar}
           />
-          <PopupEditUser
+          <EditProfilePopup
               isOpen={isEditProfilePopupOpen}
               onClose={closeAllPopups}
               onUpdateUser={handleUpdateUser}
               isLoading={isLoading}
           />
-          <PopupAddCard
+          <AddPlacePopup
               isOpen={isAddCardPopupOpen}
               onClose={closeAllPopups}
               onAddCard={handleAddPlaceSubmit}

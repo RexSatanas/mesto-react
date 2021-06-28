@@ -1,7 +1,7 @@
 import React from 'react'
 import PopupWithForm from './PopupWithForm'
 
-function PopupAddCard(props){
+function AddPlacePopup(props){
     const [title, setTitle] = React.useState('')
     const [link, setLink] = React.useState('')
 
